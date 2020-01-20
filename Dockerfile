@@ -29,7 +29,7 @@ ADD https://download.oracle.com/otn_software/linux/instantclient/195000/oracle-i
 #convertendo os arquivos para .deb e removendo após a instalação
 RUN alien -i  --scripts  ./instantclient19.5-basiclite.rpm && rm ./instantclient19.5-basiclite.*
 
-#Instalando os requerimentos da aplicação python e uma lib para conectar ao oracle e removendo o alien, pois não será mais ultilizado
+#Instalando os requerimentos da aplicação python e uma lib para conectar ao oracle e removendo o alien, pois não será mais utilizado
 RUN pip install -r requirements.txt && apt-get install libaio1 libaio-dev -y && apt-get remove alien -y
 
 #configurando as variáveis de ambiente dos drives da oracle

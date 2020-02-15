@@ -18,7 +18,7 @@ SERVICE = os.getenv('DB_SERVICE')
 connstr = f"{USERNAME}/{PASSWORD}@{HOST}:{PORT}/{SERVICE}"
 
 #Conectando ao SGBD
-conn = cx_Oracle.connect(connstr)
+conn = cx_Oracle.connect(connstr,encoding = "UTF-8", nencoding = "UTF-8")
 
 #Criando um cursor
 cursor = conn.cursor()
